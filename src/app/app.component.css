@@ -1,3 +1,7 @@
 .container {
     padding-top:  30px;
 }
+
+.list-group-item {
+    cursor: pointer;
+}

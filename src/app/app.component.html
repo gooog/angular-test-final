@@ -4,6 +4,10 @@
     <div class="col-sm-9">
       <app-map [pins]="pinsS"></app-map>
     </div>
-    <div class="col-sm-3"></div>
+    <div class="col-sm-3">
+      <ul class="list-group" *ngIf="history">
+        <li class="list-group-item" *ngFor="let h of history" (click)="search(h.name)">{{ h.name }}</li>
+      </ul>
+    </div>
   </div>
 </div>

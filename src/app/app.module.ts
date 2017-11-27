@@ -9,6 +9,7 @@ import { MapComponent } from './components/map/map.component';
 import { HttpClientModule } from '@angular/common/http';
 import {GoogleMapService} from './services/google-map.service';
 import {TwitterService} from './services/twitter.service';
+import {CacheService} from './services/cache.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {TwitterService} from './services/twitter.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [GoogleMapService, TwitterService],
+  providers: [GoogleMapService, TwitterService, CacheService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
