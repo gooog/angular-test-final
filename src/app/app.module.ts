@@ -1,18 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-
+import { SearchComponent } from './components/search/search.component';
+import { MapComponent } from './components/map/map.component';
+import { HttpClientModule } from '@angular/common/http';
+import {GoogleMapService} from './services/google-map.service';
+import {TwitterService} from './services/twitter.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchComponent,
+    MapComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GoogleMapService, TwitterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
